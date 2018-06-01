@@ -6,7 +6,8 @@
 2. In command line, navigate to your “Documents” Folder:
    - Clone the repo to your computer using `git clone {url}`
 3. N/A
-4. Look over these worksheets to help fill in any gaps. We’ll be reviewing these on Monday!
+4. Remember to add, commit, and push your changes!
+5. Look over these worksheets to help fill in any gaps. We’ll be reviewing these on Monday!
    - *NOTE: this is NOT homework. From the past two years, students have REQUESTED worksheets, so I have provided them. Use them at your discretion!*
    - [Worksheet: Arrays](https://docs.google.com/document/d/182XxytSNzySXnKOS0bmMDGMHqDvPqcwLKJNTbr74s1Y/edit?usp=sharing)
      - [Worksheet: Arrays (Answers)](https://docs.google.com/document/d/1VfKA18Cs2QO5mUZY4WNlD4_q6sf1KYq9ZxNvyvsi3nQ/edit?usp=sharing)
