@@ -1,7 +1,7 @@
 # week0.day2.conditionalsLoopsArrays
 
 ## Instructions
-1. Create a Repo on GitHub named "conditionalsLoopsArrays"
+1. Create a Repo on GitHub named "conditionalsLoopsArrays" - [GitHub Lecture (ses slide 22+)](https://docs.google.com/presentation/d/1dbCztEBiZovdkDYO3aN-K8UC7pfVzK1E5PE43j1E4f4/edit?usp=sharing)
    - Remember to initialize it with a README.md
 2. In command line, navigate to your “Documents” Folder:
    - Clone the repo to your computer using `git clone {url}`
