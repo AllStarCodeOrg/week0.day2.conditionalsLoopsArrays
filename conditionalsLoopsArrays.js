@@ -11,12 +11,14 @@ console.log("Challenge #1:");
 console.log("Challenge #2:");
 // push the user's first command line argument to the end of the 
 // "roster" array (ideally, it's a pokemon's name!)
+// console.log the "roster" array
 
 // ==================================================================
 console.log("Challenge #3:");
 // remove the item from the "roster" array that corresponds to 
 // the user's second command line argument
 // NOTE: consider what data type command line arguments come in as
+// console.log the "roster" array
 
 //////////////////
 // CONDITIONALS //
@@ -52,8 +54,9 @@ const enemyAttackType = elements[Math.floor(Math.random()*elements.length)];
 // (assuming you have a "water" pokemon...)
 
 // If the "enemyAttackType" is "plant", console.log "It's super effective!"
-// If the "enemyAttackType" is "fire", console.log "It's not very effective!"
-// If the "enemyAttackType" is "water", console.log "Nothing special happened!"
+// Else if the "enemyAttackType" is "fire", console.log "It's not very effective!"
+// Else if the "enemyAttackType" is "water", console.log "Nothing special happened!"
+// Else console.log "Error, this isn't supposed to be seen!"
 
 // NOTE: Look up how to code a "switch". Depending on the situation,
 // "switch" is better than using "if/else if" statements.
@@ -94,7 +97,7 @@ console.log("Bonus #1:");
 console.log("Bonus #2:");
 // Bonus #2:
 // If the last string in the "roster" array is "Ditto",
-// Console.log "console.log"
+// Console.log "console.log" ('cause it's Ditto...get it!?)
 // else, console.log the last string in the "roster" array 
 
 // ==================================================================
