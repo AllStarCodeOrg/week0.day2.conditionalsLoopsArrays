@@ -6,7 +6,7 @@
 2. In command line, navigate to your “Documents” Folder:
    - Clone the repo to your computer using `git clone {url}`
 3. Inside of this repo, create a file called “conditionalsLoopsArrays.js”
-   - Copy (`Ctrl+C`) and paste (`Ctrl+V`) this code into the file
+   - Copy (`Ctrl+C`) and paste (`Ctrl+V`) [this code](https://raw.githubusercontent.com/AllStarCodeOrg/week0.day2.conditionalsLoopsArrays/master/conditionalsLoopsArrays.js) into the file
 4. Follow the instructions in the comments
 5. Test your code frequently by running the `node conditionalsLoopsArrays.js` command
    - *Hint: Long filename, huh? If you’re not already doing so, use the auto-complete functionality - try hitting “Tab” after typing the first letter or two of the filename; the console will try to find the best match based on what you’ve already typed.*
