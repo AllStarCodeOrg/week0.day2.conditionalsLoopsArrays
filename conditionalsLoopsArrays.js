@@ -6,17 +6,33 @@ console.log("Challenge #1:");
 // Create an array called "roster" with the following names as 
 // strings: Pikachu, MewTwo, Onix, Eevee
 // Console.log the length of the "roster" array
+const roster = [
+    "Pikachu",
+    "MewTwo",
+    "Onix",
+    "Eevee"
+];
+
+console.log(roster.length);
 
 // ==================================================================
 console.log("Challenge #2:");
 // push the user's first command line argument to the end of the 
 // "roster" array (ideally, it's a pokemon's name!)
+// console.log the "roster" array
+roster.push(process.argv[2]);
+console.log(roster);
 
 // ==================================================================
 console.log("Challenge #3:");
 // remove the item from the "roster" array that corresponds to 
 // the user's second command line argument
 // NOTE: consider what data type command line arguments come in as
+// console.log the "roster" array
+
+const index = Number(process.argv[3]);
+roster.splice(index,1);
+console.log(roster);
 
 //////////////////
 // CONDITIONALS //
@@ -24,24 +40,28 @@ console.log("Challenge #3:");
 console.log("Challenge #4:");
 // Create a variable called "catchChance" and set it equal to .25
 // Note: this corresponds to a 25% chance to catch a pokemon!
-
+const catchChance = .25;
 // Create a variable called "catchAttempt" and set it equal to 
 // Math.random()
-
+const catchAttempt = Math.random();
 // Note: we'll learn more about Math.random() later, but for now
 // just think of it as equal to a random decimal between 0 and 1
 
 // If "catchAttempt" is less than "catchChance" console.log "Caught it!"
 // Otherwise, console.log "Aargh! Almost had it!"
-
+if(catchAttempt<catchChance){
+    console.log("Caught it!");
+}else{
+    console.log("Aargh! Almost had it!");
+}
 // ==================================================================
 console.log("Challenge #5:");
 // If the number of pokemon in the "roster" array is less than 6
 // Add an empty string to the "roster" array (signifying an empty
 // spot)
-
+if(roster.length<6) roster.push("");
 // Console.log the "roster" array
-
+console.log(roster);
 // ==================================================================
 console.log("Challenge #6:");
 const elements = ["plant","fire","water"];
@@ -52,12 +72,28 @@ const enemyAttackType = elements[Math.floor(Math.random()*elements.length)];
 // (assuming you have a "water" pokemon...)
 
 // If the "enemyAttackType" is "plant", console.log "It's super effective!"
-// If the "enemyAttackType" is "fire", console.log "It's not very effective!"
-// If the "enemyAttackType" is "water", console.log "Nothing special happened!"
+// Else if the "enemyAttackType" is "fire", console.log "It's not very effective!"
+// Else if the "enemyAttackType" is "water", console.log "Nothing special happened!"
+// Else console.log "Error, this isn't supposed to be seen!"
 
 // NOTE: Look up how to code a "switch". Depending on the situation,
 // "switch" is better than using "if/else if" statements.
-
+let string;
+switch(enemyAttackType){
+    case "plant":
+        string = "It's super effective!";
+        break;
+    case "fire":
+        string = "It's not very effective!";
+        break;
+    case "water":
+        string = "Nothing special happened!";
+        break;
+    default:
+        string = "Error, this isn't supposed to be seen!";
+        break;
+}
+console.log(string);
 
 ///////////
 // LOOPS //
@@ -65,11 +101,18 @@ const enemyAttackType = elements[Math.floor(Math.random()*elements.length)];
 console.log("Challenge #7:");
 // Console.log the first and last letter of each string in the
 // "roster" array
+for(const pokemon of roster){
+    console.log(pokemon[0]+pokemon[pokemon.length-1]);
+}
 
 // ==================================================================
 console.log("Challenge #8:");
 // Console.log the average length of strings in the "roster" array
-
+let sum = 0;
+for(const pokemon of roster){
+    sum += pokemon.length;
+}
+console.log(sum/roster.length);
 
 // ==================================================================
 console.log("Challenge #9:");
@@ -82,6 +125,12 @@ const attackDmg = Math.floor(Math.random()*20);
 
 // Hint: W3School While Loop : https://www.w3schools.com/jsref/jsref_while.asp
 
+let health = 100;
+while(health>0){
+    health -= attackDmg;
+    console.log(`Health is at: ${health}`);
+}
+
 ///////////
 // BONUS //
 ///////////
@@ -89,13 +138,24 @@ console.log("Bonus #1:");
 // Bonus #1:
 // Console.log the sum of string lengths for all of the names in the
 // "roster" array
+sum = 0;
+for(const pokemon of roster){
+    sum += pokemon.length;
+}
+console.log(sum);
 
 // ==================================================================
 console.log("Bonus #2:");
 // Bonus #2:
 // If the last string in the "roster" array is "Ditto",
-// Console.log "console.log"
+// Console.log "console.log" ('cause it's Ditto...get it!?)
 // else, console.log the last string in the "roster" array 
+const lastPokemon = roster[roster.length-1];
+if(lastPokemon==="Ditto"){
+    console.log("console.log");
+}else{
+    console.log(lastPokemon);
+}
 
 // ==================================================================
 console.log("Bonus #3:");
@@ -109,3 +169,16 @@ const enemyRoster = ["Bulbasaur","Raichu","Onix","Bob","",""];
 // Otherwise, add "Loss" to the "outcome" array.
 
 //Console.log the "outcome" array
+const outcome = [];
+for(let i = 0; i < roster.length; i++){
+    const pokemon      = roster[i];
+    const enemyPokemon = enemyRoster[i];
+
+    if(pokemon.length>=enemyPokemon.length){
+        outcome.push("Win");
+    }else{
+        outcome.push("Loss");
+    }
+}
+
+console.log(outcome);
