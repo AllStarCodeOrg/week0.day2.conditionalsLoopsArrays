@@ -73,9 +73,14 @@ console.log("Challenge #8:");
 
 // ==================================================================
 console.log("Challenge #9:");
-// Add an "X" to the end of each string in the "roster" array
-// Console.log the "roster" array
+const attackDmg = Math.floor(Math.random()*20);
+// You've been provided a variable named "attackDmg" that is a random
+// number.
+// Create a variable called "health" and set it equal to 100;
+// While "health" is above 0, subtract "attackDmg" from it and 
+// console.log(`Health is at: ${health}`);
 
+// Hint: W3School While Loop : https://www.w3schools.com/jsref/jsref_while.asp
 
 ///////////
 // BONUS //
@@ -88,7 +93,7 @@ console.log("Bonus #1:");
 // ==================================================================
 console.log("Bonus #2:");
 // Bonus #2:
-// If the last string in the "roster" array is "DittoX",
+// If the last string in the "roster" array is "Ditto",
 // Console.log "console.log"
 // else, console.log the last string in the "roster" array 
 
